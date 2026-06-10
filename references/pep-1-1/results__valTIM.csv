@@ -1,0 +1,12 @@
+TOC,,
+valTIM,(parameter),Government revenue from import duties on product m
+dim1,dim2,Value
+agr,BASE,500
+agr,SIM1,500.55280960184785
+agr,VAR,0.11056192036957846
+food,BASE,200
+food,SIM1,200.0272928054068
+food,VAR,0.013646402703404448
+othind,BASE,1800
+othind,SIM1,1800.2746450239717
+othind,VAR,0.015258056887312854

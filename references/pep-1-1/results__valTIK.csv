@@ -1,0 +1,6 @@
+TOC,,,
+valTIK,(parameter),Government revenue from taxes on type k capital used by industry j,
+dim1,dim2,dim3,Value
+cap,agr,BASE,46
+cap,agr,SIM1,46.07024341169898
+cap,agr,VAR,0.15270306891081997

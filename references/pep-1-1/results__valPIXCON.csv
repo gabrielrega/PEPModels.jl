@@ -1,0 +1,6 @@
+TOC,,
+valPIXCON,(parameter),Consumer price index
+dim1,Value,
+BASE,1,
+SIM1,1.0004176322411857,
+VAR,0.041763224118573916,

@@ -1,0 +1,24 @@
+TOC,,,
+valR,(parameter),Rental rate of type k capital in industry j,
+dim1,dim2,dim3,Value
+cap,agr,BASE,1
+cap,agr,SIM1,1.0003515808290024
+cap,agr,VAR,0.035158082900244025
+cap,ind,BASE,1
+cap,ind,SIM1,1.0003515808290024
+cap,ind,VAR,0.035158082900244025
+cap,ser,BASE,1
+cap,ser,SIM1,1.0003515808290024
+cap,ser,VAR,0.035158082900244025
+cap,adm,BASE,1
+cap,adm,SIM1,1
+land,agr,BASE,1
+land,agr,SIM1,1.0017887486982915
+land,agr,VAR,0.17887486982914869
+land,ind,BASE,1
+land,ind,SIM1,1.0017887486982915
+land,ind,VAR,0.17887486982914869
+land,ser,BASE,1
+land,ser,SIM1,1
+land,adm,BASE,1
+land,adm,SIM1,1

@@ -1,0 +1,9 @@
+TOC,,
+valW,(parameter),Wage rate of type l labor
+dim1,dim2,Value
+usk,BASE,1
+usk,SIM1,1.0012386472957495
+usk,VAR,0.12386472957495176
+sk,BASE,1
+sk,SIM1,1.0005145655650391
+sk,VAR,0.051456556503914896

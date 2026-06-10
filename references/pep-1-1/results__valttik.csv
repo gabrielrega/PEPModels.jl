@@ -1,0 +1,5 @@
+TOC,,,
+valttik,(parameter),Tax rate on type k capital used in industry j,
+dim1,dim2,dim3,Value
+cap,agr,BASE,0.02205177372962608
+cap,agr,SIM1,0.02205177372962608

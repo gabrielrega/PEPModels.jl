@@ -1,0 +1,23 @@
+TOC,,
+rho_X,(parameter),Elasticity parameter (CET - exports and local sales)
+dim1,dim2,Value
+agr,agr,1.5
+agr,ser,1
+agr,adm,1
+agr,food,1
+agr,othind,1
+ind,agr,1
+ind,ser,1
+ind,adm,1
+ind,food,1.5
+ind,othind,1
+ser,agr,1
+ser,ser,1.5
+ser,adm,1
+ser,food,1
+ser,othind,1
+adm,agr,1
+adm,ser,1
+adm,adm,1
+adm,food,1
+adm,othind,1

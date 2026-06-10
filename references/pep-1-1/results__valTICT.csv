@@ -1,0 +1,6 @@
+TOC,,
+valTICT,(parameter),Total government receipts of indirect taxes on commodities
+dim1,Value,
+BASE,4375,
+SIM1,4375.6141456636515,
+VAR,0.014037615169182338,

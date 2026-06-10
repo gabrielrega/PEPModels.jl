@@ -1,0 +1,6 @@
+TOC,,
+valTDFT,(parameter),Total government revenue from business income taxes
+dim1,Value,
+BASE,1300,
+SIM1,1300.6314171538702,
+VAR,0.04857055029769963,

@@ -1,0 +1,12 @@
+TOC,,,
+valTIW,(parameter),Government revenue from payroll taxes on type l labor in industry j,
+dim1,dim2,dim3,Value
+usk,agr,BASE,1500
+usk,agr,SIM1,1502.8086365538766
+usk,agr,VAR,0.18724243692509468
+usk,ind,BASE,343
+usk,ind,SIM1,342.8233427715819
+usk,ind,VAR,-0.051503565136468143
+sk,agr,BASE,137
+sk,agr,SIM1,137.23666399542233
+sk,agr,VAR,0.17274744191411173

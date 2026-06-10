@@ -1,0 +1,13 @@
+TOC,,
+B_X,(parameter),Scale parameter (CET - exports and local sales)
+dim1,dim2,Value
+agr,agr,2.0962468206984366
+agr,ser,2.0000000000000004
+agr,food,2.000000000000001
+ind,agr,2.000000000000001
+ind,ser,2.0000000000000004
+ind,food,4.3715377171345
+ind,othind,2.000000000000001
+ser,ser,2.475555084422872
+ser,food,2.000000000000001
+adm,adm,1.9999999999999991

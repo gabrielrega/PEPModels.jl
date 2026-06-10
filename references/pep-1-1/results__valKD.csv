@@ -1,0 +1,18 @@
+TOC,,,
+valKD,(parameter),Demand for type k capital by industry j,
+dim1,dim2,dim3,Value
+cap,agr,BASE,2086
+cap,agr,SIM1,2088.4511266323193
+cap,agr,VAR,0.11750367364906644
+cap,ind,BASE,7015
+cap,ind,SIM1,7011.930677884679
+cap,ind,VAR,-0.04375370085988317
+cap,ser,BASE,4009
+cap,ser,SIM1,4009.618195483001
+cap,ser,VAR,0.015420191643822356
+land,agr,BASE,6133
+land,agr,SIM1,6133.158488090656
+land,agr,VAR,0.0025841854011998677
+land,ind,BASE,100
+land,ind,SIM1,99.84151190934406
+land,ind,VAR,-0.15848809065593938

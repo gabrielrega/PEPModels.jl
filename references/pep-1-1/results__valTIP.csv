@@ -1,0 +1,9 @@
+TOC,,
+valTIP,(parameter),Government revenue from taxes on industry j production (excluding taxes directly related to the use of capital and labor)
+dim1,dim2,Value
+agr,BASE,-1693
+agr,SIM1,-1695.7232256602233
+agr,VAR,0.1608520767999666
+ind,BASE,-293
+ind,SIM1,-292.9020237938654
+ind,VAR,-0.03343897820293762

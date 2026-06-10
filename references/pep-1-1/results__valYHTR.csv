@@ -1,0 +1,9 @@
+TOC,,
+valYHTR,(parameter),Transfer income of type h households
+dim1,dim2,Value
+hup,BASE,139
+hup,SIM1,139.05805088152482
+hup,VAR,0.041763224118573916
+hur,BASE,1900
+hur,SIM1,1900.9266100679922
+hur,VAR,0.04876895094696465

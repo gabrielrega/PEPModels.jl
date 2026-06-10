@@ -1,0 +1,6 @@
+TOC,,
+valTIPT,(parameter),Total government revenue from production taxes (excluding taxes directly related to the use of capital and labor)
+dim1,Value,
+BASE,-1986,
+SIM1,-1988.6252494540888,
+VAR,0.1321877872149546,

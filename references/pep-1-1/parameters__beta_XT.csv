@@ -1,0 +1,13 @@
+TOC,,
+beta_XT,(parameter),Share parameter (CET - total output)
+dim1,dim2,Value
+agr,agr,0.04542232649975936
+agr,ser,0.4980799024643862
+agr,food,0.4564977710358544
+ind,agr,0.16095867976245157
+ind,ser,0.7198290990349228
+ind,food,0.025498454706961635
+ind,othind,0.09371376649566421
+ser,ser,0.07761466459270339
+ser,food,0.9223853354072966
+adm,adm,1

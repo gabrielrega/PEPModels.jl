@@ -1,0 +1,6 @@
+TOC,,
+valCG,(parameter),Public final consumption of commodity i
+dim1,dim2,Value
+adm,BASE,8255
+adm,SIM1,8249.788124159923
+adm,VAR,-0.06313598837162093

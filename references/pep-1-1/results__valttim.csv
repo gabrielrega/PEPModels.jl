@@ -1,0 +1,9 @@
+TOC,,
+valttim,(parameter),Rate of taxes and duties on imports of commodity i
+dim1,dim2,Value
+agr,BASE,0.19135093761959435
+agr,SIM1,0.19135093761959435
+food,BASE,0.13717421124828533
+food,SIM1,0.13717421124828533
+othind,BASE,0.18054162487462388
+othind,SIM1,0.18054162487462388

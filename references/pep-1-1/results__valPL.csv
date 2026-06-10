@@ -1,0 +1,17 @@
+TOC,,
+valPL,(parameter),Price of local product i (excluding all taxes on products)
+dim1,dim2,Value
+agr,BASE,1
+agr,SIM1,1.0006784494945913
+agr,VAR,0.06784494945912822
+ser,BASE,1
+ser,SIM1,1.000490727699881
+ser,VAR,0.04907276998808996
+adm,BASE,1
+adm,SIM1,1.000631758752927
+adm,VAR,0.06317587529269808
+food,BASE,1
+food,SIM1,1.000467978785066
+food,VAR,0.046797878506610324
+othind,BASE,1
+othind,SIM1,1

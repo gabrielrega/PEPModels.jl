@@ -1,0 +1,114 @@
+Name,Type,Dim,Count,Explanatory text
+valC,parameter,3,48,Consumption of commodity i by type h households
+valCAB,parameter,1,2,Current account balance
+valCG,parameter,2,3,Public final consumption of commodity i
+valCI,parameter,2,12,Total intermediate consumption of industry j
+valCMIN,parameter,3,32,Minimum consumption of commodity i by type h households
+valCTH,parameter,2,12,Consumption budget of type h households
+valCTH_REAL,parameter,2,12,Real consumption budget of type h households
+valDD,parameter,2,12,Domestic demand for commodity i produced locally
+valDI,parameter,3,45,Intermediate consumption of commodity i by industry j
+valDIT,parameter,2,12,Total intermediate demand for commodity i
+valDS,parameter,3,27,Supply of commodity i by sector j to the domestic market
+vale,parameter,1,2,Exchange rate (price of foreign currency in local currency)
+valEX,parameter,3,12,Quantity of product x exported by sector j
+valEXD,parameter,2,12,World demand for exports of product x
+valG,parameter,1,2,Current government expenditures on goods and services
+valGDP_BP,parameter,1,3,GDP at basic prices
+valGDP_BP_REAL,parameter,1,3,Real GDP at basic prices
+valGDP_FD,parameter,1,3,GDP at purchasers' prices from the perspective of final demand
+valGDP_IB,parameter,1,3,GDP at market prices (income-based)
+valGDP_MP,parameter,1,3,GDP at market prices
+valGDP_MP_REAL,parameter,1,3,Real GDP at market prices
+valGFCF,parameter,1,3,Gross fixed capital formation
+valGFCF_REAL,parameter,1,3,Real gross fixed capital formation
+valG_REAL,parameter,1,3,Real current government expenditures on goods and services
+valIM,parameter,2,12,Quantity of product m imported
+valINV,parameter,2,6,Final demand of commodity i for investment purposes (GFCF)
+valIT,parameter,1,3,Total investment expenditures
+valKD,parameter,3,15,Demand for type k capital by industry j
+valKDC,parameter,2,9,Industry j demand for composite capital
+valKS,parameter,2,4,Supply of type k capital
+valLD,parameter,3,18,Demand for type l labor by industry j
+valLDC,parameter,2,12,Industry j demand for composite labor
+valLS,parameter,2,4,Supply of type l labor
+valMRGN,parameter,2,3,Demand for commodity i as a trade or transport margin
+valP,parameter,3,30,Basic price of industry j's production of commodity i
+valPC,parameter,2,15,Purchaser price of composite comodity i (including all taxes and margins)
+valPCI,parameter,2,12,Intermediate consumption price index of industry j
+valPD,parameter,2,14,Price of local product i sold on the domestic market (including all taxes and margins)
+valPE,parameter,2,14,Price received for exported commodity x (excluding export taxes)
+valPE_FOB,parameter,2,14,FOB price of exported commodity x (in local currency)
+valPIXCON,parameter,1,3,Consumer price index
+valPIXGDP,parameter,1,3,GDP deflator
+valPIXGVT,parameter,1,3,Public expenditures price index
+valPIXINV,parameter,1,3,Investment price index
+valPL,parameter,2,14,Price of local product i (excluding all taxes on products)
+valPM,parameter,2,11,Price of imported product m (including all taxes and tariffs)
+valPP,parameter,2,12,Industry j unit cost including taxes directly related to the use of capital and labor but excluding other taxes on production
+valPT,parameter,2,12,Basic price of industry j's output
+valPVA,parameter,2,12,Price of industry j value added (including taxes on production directly related to the use of capital and labour)
+valPWM,parameter,2,10,World price of imported product m (expressed in foreign currency)
+valPWX,parameter,2,10,World price of exported product x (expressed in foreign currency)
+valQ,parameter,2,15,Quantity demanded of composite commodity i
+valR,parameter,3,21,Rental rate of type k capital in industry j
+valRC,parameter,2,9,Rental rate of industry j composite capital
+valRK,parameter,2,6,Rental rate of type k capital (if capital is mobile)
+valRTI,parameter,3,21,Rental rate paid by industry j for type k capital including capital taxes
+valSF,parameter,2,3,Savings of type f businesses
+valSG,parameter,1,3,Government savings
+valSH,parameter,2,6,Savings of type h households
+valsh0,parameter,2,0,Intercept (type h household savings)
+valsh1,parameter,2,4,Slope (type h household savings)
+valSROW,parameter,1,2,Rest-of-the-world savings
+valTDF,parameter,2,3,Income taxes of type f businesses
+valTDFT,parameter,1,3,Total government revenue from business income taxes
+valTDH,parameter,2,12,Income taxes of type h households
+valTDHT,parameter,1,3,Total government revenue from household income taxes
+valTIC,parameter,2,12,Government revenue from indirect taxes on product i
+valTICT,parameter,1,3,Total government receipts of indirect taxes on commodities
+valTIK,parameter,3,3,Government revenue from taxes on type k capital used by industry j
+valTIKT,parameter,1,3,Total government revenue from from taxes on capital
+valTIM,parameter,2,9,Government revenue from import duties on product m
+valTIMT,parameter,1,3,Total government revenue from import duties
+valTIP,parameter,2,6,Government revenue from taxes on industry j production (excluding taxes directly related to the use of capital and labor)
+valTIPT,parameter,1,3,Total government revenue from production taxes (excluding taxes directly related to the use of capital and labor)
+valTIW,parameter,3,9,Government revenue from payroll taxes on type l labor in industry j
+valTIWT,parameter,1,3,Total government revenue from payroll taxes
+valTIX,parameter,2,3,Government revenue from export taxes on product x
+valTIXT,parameter,1,3,Total government revenue from export taxes
+valTPRCTS,parameter,1,3,Total government revenue from taxes on products and imports
+valTPRODN,parameter,1,3,Total government revenue from other taxes on production
+valTR,parameter,3,33,Transfers from agent agj to agent ag
+valtr0,parameter,2,0,Intercept (transfers by type h households to government)
+valtr1,parameter,2,6,Marginal rate of transfers by type h households to government
+valttdf0,parameter,2,0,Intercept (income taxes of type f businesses)
+valttdf1,parameter,2,2,Marginal income tax rate of type f businesses
+valttdh0,parameter,2,0,Intercept (income taxes of type h households)
+valttdh1,parameter,2,8,Marginal income tax rate of type h households
+valttic,parameter,2,8,Tax rate on commodity i
+valttik,parameter,3,2,Tax rate on type k capital used in industry j
+valttim,parameter,2,6,Rate of taxes and duties on imports of commodity i
+valttip,parameter,2,4,Tax rate on the production of industry j
+valttiw,parameter,3,6,Tax rate on type l worker compensation in industry j
+valttix,parameter,2,3,Export tax rate on exported commodity i
+valVA,parameter,2,12,Value added of industry j
+valVSTK,parameter,2,4,Inventory change of commodity i
+valW,parameter,2,6,Wage rate of type l labor
+valWC,parameter,2,12,Wage rate of industry j composite labor
+valWTI,parameter,3,24,Wage rate paid by industry j for type l labor including payroll taxes
+valXS,parameter,3,30,Industry j production of commodity i
+valXST,parameter,2,12,Total aggregate output of industry j
+valYDF,parameter,2,3,Disposable income of type f businesses
+valYDH,parameter,2,12,Disposable income of type h households
+valYF,parameter,2,3,Total income of type f businesses
+valYFK,parameter,2,3,Capital income of type f businesses
+valYFTR,parameter,2,3,Transfer income of type f businesses
+valYG,parameter,1,3,Total government income
+valYGK,parameter,1,0,Government capital income
+valYGTR,parameter,1,3,Government transfer income
+valYH,parameter,2,12,Total income of type h households
+valYHK,parameter,2,12,Capital income of type h households
+valYHL,parameter,2,12,Labor income of type h households
+valYHTR,parameter,2,6,Transfer income of type h households
+valYROW,parameter,1,3,Rest-of-the-world income

@@ -1,0 +1,5 @@
+TOC,,
+valG,(parameter),Current government expenditures on goods and services
+dim1,Value,
+BASE,8255,
+SIM1,8255,

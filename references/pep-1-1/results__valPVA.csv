@@ -1,0 +1,15 @@
+TOC,,
+valPVA,(parameter),Price of industry j value added (including taxes on production directly related to the use of capital and labour)
+dim1,dim2,Value
+agr,BASE,1.0879724008154306
+agr,SIM1,1.0893577918696402
+agr,VAR,0.12733696674394057
+ind,BASE,1.036473840918758
+ind,SIM1,1.0371016770395525
+ind,VAR,0.06057423699550313
+ser,BASE,1
+ser,SIM1,1.0004684040056782
+ser,VAR,0.0468404005678158
+adm,BASE,1
+adm,SIM1,1.0010619589290657
+adm,VAR,0.10619589290656872

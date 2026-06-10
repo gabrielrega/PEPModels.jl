@@ -1,0 +1,9 @@
+TOC,,,
+valttiw,(parameter),Tax rate on type l worker compensation in industry j,
+dim1,dim2,dim3,Value
+usk,agr,BASE,0.14997000599880023
+usk,agr,SIM1,0.14997000599880023
+usk,ind,BASE,0.14984709480122324
+usk,ind,SIM1,0.14984709480122324
+sk,agr,BASE,0.15054945054945054
+sk,agr,SIM1,0.15054945054945054

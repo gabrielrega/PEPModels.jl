@@ -1,0 +1,6 @@
+TOC,,
+valTDF,(parameter),Income taxes of type f businesses
+dim1,dim2,Value
+firm,BASE,1300
+firm,SIM1,1300.6314171538702
+firm,VAR,0.04857055029769963

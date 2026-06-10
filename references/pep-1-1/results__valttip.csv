@@ -1,0 +1,7 @@
+TOC,,
+valttip,(parameter),Tax rate on the production of industry j
+dim1,dim2,Value
+agr,BASE,-0.06177930229163625
+agr,SIM1,-0.06177930229163625
+ind,BASE,-0.016431135038133694
+ind,SIM1,-0.016431135038133694

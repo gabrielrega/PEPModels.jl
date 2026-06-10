@@ -1,0 +1,6 @@
+TOC,,
+valPIXGDP,(parameter),GDP deflator
+dim1,Value,
+BASE,1,
+SIM1,1.0008845801040844,
+VAR,0.08845801040844314,

@@ -1,0 +1,8 @@
+TOC,,,,,
+Parameter,Value,Explanatory text,,,
+eta,1,Price elasticity of indexed transfers and parameters,,,
+kmob,1,Flag parameter (1 if capital is mobile),,,
+,,,,,
+Variable,Lowerbound,Value,Upperbound,Marginal,Explanatory text
+,,,,,
+Equation,Lowerbound,Value,Upperbound,Marginal,Explanatory text

@@ -1,0 +1,6 @@
+TOC,,
+valG_REAL,(parameter),Real current government expenditures on goods and services
+dim1,Value,
+BASE,8255,
+SIM1,8249.788124142771,
+VAR,-0.06313598857938807,

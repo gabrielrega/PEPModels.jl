@@ -1,0 +1,15 @@
+TOC,,,
+valEX,(parameter),Quantity of product x exported by sector j,
+dim1,dim2,dim3,Value
+agr,agr,BASE,7417
+agr,agr,SIM1,7435.458404552697
+agr,agr,VAR,0.24886617975863334
+ind,food,BASE,241
+ind,food,SIM1,240.7898423475198
+ind,food,VAR,-0.08720234542747285
+ind,othind,BASE,1180
+ind,othind,SIM1,1178.9707382036158
+ind,othind,VAR,-0.08722557596475555
+ser,ser,BASE,2653
+ser,ser,SIM1,2651.75575829893
+ser,ser,VAR,-0.04689942333472308

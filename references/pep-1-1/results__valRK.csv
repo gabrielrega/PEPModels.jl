@@ -1,0 +1,9 @@
+TOC,,
+valRK,(parameter),Rental rate of type k capital (if capital is mobile)
+dim1,dim2,Value
+cap,BASE,1
+cap,SIM1,1.0003515808290024
+cap,VAR,0.035158082900244025
+land,BASE,1
+land,SIM1,1.0017887486982915
+land,VAR,0.17887486982914869

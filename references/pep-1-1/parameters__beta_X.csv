@@ -1,0 +1,13 @@
+TOC,,
+beta_X,(parameter),Share parameter (CET - exports and local sales)
+dim1,dim2,Value
+agr,agr,0.6079411295101899
+agr,ser,0.5
+agr,food,0.5
+ind,agr,0.5
+ind,ser,0.5
+ind,food,0.8897554755927344
+ind,othind,0.5
+ser,ser,0.7254988319502688
+ser,food,0.5
+adm,adm,0.5

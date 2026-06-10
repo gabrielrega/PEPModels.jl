@@ -1,0 +1,6 @@
+TOC,,
+valttix,(parameter),Export tax rate on exported commodity i
+dim1,dim2,Value
+agr,BASE,0.013240604520529624
+agr,SIM1,0.009930453390397219
+agr,VAR,-25

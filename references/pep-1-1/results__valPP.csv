@@ -1,0 +1,15 @@
+TOC,,
+valPP,(parameter),Industry j unit cost including taxes directly related to the use of capital and labor but excluding other taxes on production
+dim1,dim2,Value
+agr,BASE,1.065847302710902
+agr,SIM1,1.066986985478068
+agr,VAR,0.10692739609767798
+ind,BASE,1.016705627458806
+ind,SIM1,1.0171837141836542
+ind,VAR,0.04702312173121559
+ser,BASE,1
+ser,SIM1,1.0004587229680055
+ser,VAR,0.04587229680055316
+adm,BASE,1
+adm,SIM1,1.000631758752928
+adm,VAR,0.0631758752928091

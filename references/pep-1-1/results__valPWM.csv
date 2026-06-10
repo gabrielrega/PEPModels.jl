@@ -1,0 +1,13 @@
+TOC,,
+valPWM,(parameter),World price of imported product m (expressed in foreign currency)
+dim1,dim2,Value
+agr,BASE,1
+agr,SIM1,1
+ser,BASE,1
+ser,SIM1,1
+adm,BASE,1
+adm,SIM1,1
+food,BASE,1
+food,SIM1,1
+othind,BASE,1
+othind,SIM1,1

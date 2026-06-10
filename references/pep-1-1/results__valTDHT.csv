@@ -1,0 +1,6 @@
+TOC,,
+valTDHT,(parameter),Total government revenue from household income taxes
+dim1,Value,
+BASE,1008,
+SIM1,1008.821621968024,
+VAR,0.08151011587540502,

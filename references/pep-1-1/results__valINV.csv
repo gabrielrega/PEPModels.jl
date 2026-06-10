@@ -1,0 +1,9 @@
+TOC,,
+valINV,(parameter),Final demand of commodity i for investment purposes (GFCF)
+dim1,dim2,Value
+agr,BASE,2038.448691880168
+agr,SIM1,2032.8125444509208
+agr,VAR,-0.2764919937253252
+food,BASE,6284.270828983087
+food,SIM1,6267.863714097558
+food,VAR,-0.26108223741503345

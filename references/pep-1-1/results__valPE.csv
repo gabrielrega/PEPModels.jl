@@ -1,0 +1,17 @@
+TOC,,
+valPE,(parameter),Price received for exported commodity x (excluding export taxes)
+dim1,dim2,Value
+agr,BASE,1
+agr,SIM1,1.0020443116661055
+agr,VAR,0.2044311666105525
+ser,BASE,1
+ser,SIM1,1.0002345796330294
+ser,VAR,0.02345796330294192
+adm,BASE,1
+adm,SIM1,1
+food,BASE,1
+food,SIM1,1.0004362970951213
+food,VAR,0.04362970951212741
+othind,BASE,1
+othind,SIM1,1.0004361807903224
+othind,VAR,0.043618079032237134
