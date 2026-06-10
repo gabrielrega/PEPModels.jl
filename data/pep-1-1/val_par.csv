@@ -1,0 +1,37 @@
+PEP 1-1 version 2.1,,,,,
+Exogenous parameters,,,,,
+,,,,,
+Parameters indexed in j ,,,,,
+,sigma_KD,sigma_LD,sigma_VA,sigma_XT,
+AGR,0.8,0.8,1.5,2,
+IND,0.8,0.8,1.5,2,
+SER,0.8,0.8,1.5,2,
+ADM,0.8,0.8,1.5,2,
+,,,,,
+Parameters indexed in i,,,,,
+,sigma_M,sigma_XD,,,
+AGR,2,2,,,
+FOOD,2,2,,,
+OTHIND,2,2,,,
+SER,2,2,,,
+ADM,2,2,,,
+,,,,,
+"Parameters indexed in j,i",,,,,
+,AGR,FOOD,OTHIND,SER,ADM
+AGR,2,2,2,2,2
+IND,2,2,2,2,2
+SER,2,2,2,2,2
+ADM,2,2,2,2,2
+,,,,,
+Parameters indexed in ag,,,,,
+,HRP,HUP,HRR,HUR,FIRM
+frisch,-1.5,-1.5,-1.5,-1.5,
+AGR,0.7,0.7,0.7,0.7,
+FOOD,1.1,1.1,1.1,1.1,
+OTHIND,1.1,1.1,1.1,1.1,
+SER,1.05,1.05,1.05,1.05,
+ADM,1.05,1.05,1.05,1.05,
+sh0O,0,0,0,0,
+tr0O,0,0,0,0,
+ttdh0O,0,0,0,0,
+ttdf0O,,,,,0
