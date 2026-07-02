@@ -5,6 +5,10 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/);
 versionamento conforme [SemVer](https://semver.org/lang/pt-BR/).
 
 ## [Não lançado]
+### Adicionado
+- Dados-fonte do IBGE (ano-base 2015) para a construção da SAM brasileira do
+  PEP-1-1 em `references/sam-br/`: MIP níveis 67 e 12, TRU nível 68 (aba VA)
+  e Contas Econômicas Integradas, com dumps CSV e README das fontes.
 
 ## [0.1.0] - 2026-06-10
 ### Adicionado

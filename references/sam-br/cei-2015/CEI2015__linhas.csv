@@ -1,0 +1,62 @@
+P.7,Importação de bens e serviços,1,True,Importação de bens e serviços
+P.6,Exportação de bens e serviços,2,True,Exportação de bens e serviços
+P.1,Produção,3,True,Produção
+P.11,  Produção mercantil,4,True,  Produção mercantil
+P.12 ,  Produção não-mercantil,5,True,  Produção não-mercantil
+P.2,Consumo intermediário,6,True,Consumo intermediário
+D.21-D.31,"Impostos, líquidos de subsídios, sobre produtos",7,True,"Impostos, líquidos de subsídios, sobre produtos"
+S.1,Valor adicionado bruto/Produto interno bruto,8,True,Valor adicionado bruto/Produto interno bruto
+S.11,Saldo externo de bens e serviços,9,True,Saldo externo de bens e serviços
+D.1,Remuneração dos empregados,10,True,Remuneração dos empregados
+D.11,  Ordenados e salários,11,True,  Ordenados e salários
+D.12,  Contribuições sociais dos empregadores,12,True,  Contribuições sociais dos empregadores
+D.121,    Contribuições sociais efetivas,13,True,    Contribuições sociais efetivas
+D.122,    Contribuições sociais imputadas,14,True,    Contribuições sociais imputadas
+D.2-D.3,"Impostos, líquidos de subsídios, sobre a produção e a importação",15,True,"Impostos, líquidos de subsídios, sobre a produção e a importação"
+D.21-D.31,"  Impostos, líquidos de subsídios, sobre produtos",16,True,"  Impostos, líquidos de subsídios, sobre produtos"
+D.29-D.39,"  Outros impostos, líquidos de subsídios, sobre a produção",17,True,"  Outros impostos, líquidos de subsídios, sobre a produção"
+S.2,Excedente operacional bruto,18,True,Excedente operacional bruto
+S.3,Rendimento misto bruto (rendimento de autônomos),19,True,Rendimento misto bruto (rendimento de autônomos)
+D.4,Rendas de propriedade,20,True,Rendas de propriedade
+D.41,  Juros,21,True,  Juros
+D.42,  Dividendos e retiradas,22,True,  Dividendos e retiradas
+D.43,  Lucros de investim direto estrangeiro reinvestidos,23,False,  Lucros reinvestidos de investimento direto estrangeiro 
+D.44,   Rendim  propried atrib detentores apólices seguros,24,False,  Rendimento de propriedade atribuído a detentores de apólices de seguros
+D.45,   Aluguel da terra,25,False,  Renda da terra
+S.5/S.5*,Saldo das rendas primárias brutas/Renda nacional bruta,26,False,Saldo das rendas primárias brutas/Renda nacional bruta (2)
+D.5,"Impostos correntes sobre a renda, patrimônio, etc.",27,True,"Impostos correntes sobre a renda, patrimônio, etc."
+D.61,Contribuições sociais,28,True,Contribuições sociais
+D.611,  Contribuições sociais efetivas,29,True,  Contribuições sociais efetivas
+D.6111,    Contribuições sociais efetivas dos empregadores,30,True,    Contribuições sociais efetivas dos empregadores
+D.6112,    Contribuições sociais dos empregados,31,True,    Contribuições sociais dos empregados
+D.6113,    Contribuições sociais dos não-assalariados,32,True,    Contribuições sociais dos não-assalariados
+D.612,  Contribuições sociais imputadas,33,True,  Contribuições sociais imputadas
+D.62,"Benefícios sociais, exceto transferências sociais em espécie",34,True,"Benefícios sociais, exceto transferências sociais em espécie"
+D.621,,35,False,  Benefícios de seguridade social em numerário 
+D.622,  Benefícios sociais com constituição de fundos,36,True,  Benefícios sociais com constituição de fundos
+D.623,  Benefícios sociais sem constituição de fundos,37,True,  Benefícios sociais sem constituição de fundos
+D.624,  Benefícios de assistência social em numerário,38,True,  Benefícios de assistência social em numerário
+D.7,Outras transferências correntes,39,True,Outras transferências correntes
+D.71,      Prêmios líquidos de seguros não-vida,40,False,  Prêmios líquidos de seguros não-vida
+D.72,      Indenizações de seguros não-vida,41,False,  Indenizações de seguros não-vida
+D.73,      Transferências correntes entre administrações públicas,42,False,  Transferências correntes entre administrações públicas
+D.74,     Cooperação Internacional,43,False,  Cooperação Internacional
+D.75,      Transferências correntes diversas,44,False,  Transferências correntes diversas
+S.6,Renda disponível bruta,45,True,Renda disponível bruta
+D.63,Transferências sociais em espécie,46,True,Transferências sociais em espécie
+B.7,Renda disponível bruta ajustada ,47,False,Renda disponível bruta ajustada
+S.6,Renda disponível bruta,48,True,Renda disponível bruta
+P.4,Consumo final efetivo,49,True,Consumo final efetivo
+P.3,Despesa de consumo final,50,True,Despesa de consumo final
+D.8,"Ajustamento pela variação das participações líquidas das famílias nos fundos de pensões, FGTS e PIS/PASEP ",51,False,"Ajustamento pela variação das participações líquidas das famílias nos fundos de pensões, FGTS e PIS/PASEP"
+S.8,Poupança bruta,52,True,Poupança bruta
+S.12,Saldo externo corrente ,53,False,Saldo externo corrente
+S.8,Poupança bruta,54,True,Poupança bruta
+S.12,Saldo externo corrente ,55,False,Saldo externo corrente
+P.51,Formação bruta de capital fixo,56,True,Formação bruta de capital fixo
+P.52,Variação de estoques,57,True,Variação de estoques
+K.2 ,Aquisição líquida de cessão de ativo não financeiro não produzido,58,False,Aquisições líquidas de cessões de ativos não-financeiros não-produzidos
+D.9,Transferências de capital a receber,59,True,Transferências de capital a receber
+D.9,Transferências de capital a pagar,60,True,Transferências de capital a pagar
+S.9,Capacidade (+) / Necessidade(-) líquida de financiamento,61,True,Capacidade (+) / Necessidade(-) líquida de financiamento
+S.10.1,Variações do patrimônio líquido resultantes de poupança e da transferência de capital,62,True,Variações do patrimônio líquido resultantes de poupança e da transferência de capital
