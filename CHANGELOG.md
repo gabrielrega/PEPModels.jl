@@ -6,8 +6,13 @@ versionamento conforme [SemVer](https://semver.org/lang/pt-BR/).
 
 ## [Não lançado]
 ### Adicionado
+- SAM brasileira 2015 balanceada (`data/pep-1-1-br/sam.csv`) com 4 setores
+  (AGR/IND/SER/ADM), 1 trabalho, 1 capital, 1 família, FIRM/GVT/ROW e contas
+  de impostos, construída por `references/sam-br/build_sam.py` a partir de
+  MIP/TRU/CEI 2015; todas as 22 contas fecham exatas e o PIB bate com o IBGE
+  (R$ 5.995.787 mi) pelas óticas da renda e da despesa.
 - Dados-fonte do IBGE (ano-base 2015) para a construção da SAM brasileira do
-  PEP-1-1 em `references/sam-br/`: MIP níveis 67 e 12, TRU nível 68 (aba VA)
+  PEP-1-1 em `references/sam-br/`: MIP níveis 67 e 12, TRU níveis 68 e 12
   e Contas Econômicas Integradas, com dumps CSV e README das fontes.
 
 ## [0.1.0] - 2026-06-10

@@ -9,6 +9,8 @@ FILES = [
     "mip-ibge-2015/Matriz_de_Insumo_Produto_2015_Nivel_67.xls",
     "mip-ibge-2015/Matriz_de_Insumo_Produto_2015_Nivel_12.xls",
     "cei-2015/CEI2015.xls",
+    "tru-2015/12_tab1_2015.xls",
+    "tru-2015/12_tab2_2015.xls",
     "tru-2015/68_tab1_2015.xls",
     "tru-2015/68_tab2_2015.xls",
     "tru-2015/68_tab3_2015.xls",
