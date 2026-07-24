@@ -104,3 +104,30 @@ administração pública 1,26.
   tipo de trabalho (LAB) e um só de capital (CAP). O valor não afeta resultado.
 - Interceptos `sh0O`, `tr0O`, `ttdh0O`, `ttdf0O` = 0, ou seja, poupança,
   transferências e impostos diretos proporcionais à renda (como no PEP padrão).
+
+### O que a sensibilidade mostrou
+
+`scripts/sensibilidade_br.jl` roda um corte de 50% em todas as tarifas de
+importação sob cada variação de parâmetro (o benchmark é o mesmo em todos os
+casos, então a sensibilidade só aparece na resposta ao choque). Resumo:
+
+| parâmetro | faixa testada | efeito nos agregados |
+|---|---|---|
+| `sigma_XD` | 1 a 10 | **dominante** — resposta do PIB varia 8× (−0,14% a −0,02%) |
+| `sigma_M[ind]` | 0,9 a 3,0 | moderado — PIB −0,057% a −0,129%; sinais nunca invertem |
+| `sigma_VA` | metade a 1,5 uniforme | irrelevante nos agregados, **relevante nos preços de fator** |
+| `frisch` | −1,5 a −3,0 | desprezível para choque comercial |
+| `sigma_M[agr]` | 1,3 a 4,5 | desprezível (agropecuária é 1,5% das importações) |
+
+Três consequências práticas:
+
+1. **A escolha 1,15 vs 1,50 para `sigma_M[ind]` não é crítica.** Muda a
+   magnitude em ~20% nas variáveis de comércio e produto, mas nenhum sinal se
+   inverte e o bem-estar quase não se move (+0,282% vs +0,277%).
+2. **O parâmetro que manda é `sigma_XD`** — justamente o que ficou no default 2
+   da PEP, sem nenhuma evidência brasileira. É aí que vale investir estimação.
+3. `sigma_M[agr]`, que era o menos ancorado, é também o menos consequente.
+
+Cuidado ao ler o PIB: `GDP_MP` inclui impostos sobre produtos, então parte da
+queda é a perda mecânica de arrecadação, não perda de eficiência. O bem-estar
+(`CTH_REAL`) sobe em todos os cenários.

@@ -21,6 +21,10 @@ versionamento conforme [SemVer](https://semver.org/lang/pt-BR/).
   calibrar a partir de qualquer diretório de base.
 - Testes da base brasileira: conjuntos generalizados, PIB pelas três óticas,
   benchmark como equilíbrio e um choque tarifário.
+- `scripts/sensibilidade_br.jl`: sensibilidade dos resultados às elasticidades
+  incertas do `val_par.csv` sob um choque tarifário. Conclusões em
+  `references/sam-br/README.md` — `sigma_XD` domina, `sigma_M[ind]` (a escolha
+  1,15 vs 1,50) é secundária e `sigma_M[agr]` é irrelevante.
 - Parâmetros exógenos brasileiros (`data/pep-1-1-br/val_par.csv`): Armington do
   IPEA (TD 124) para a indústria, σVA do GTAP ponderado pelo VAB do IBGE, LES
   com `frisch = -2,0` e elasticidades-renda por Engel; proveniência documentada
