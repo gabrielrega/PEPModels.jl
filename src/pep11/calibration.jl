@@ -4,12 +4,14 @@
 # do estado intermediário correto.
 
 """
-    calibrate(sam, par) -> NamedTuple
+    calibrate(sam, par, sets) -> NamedTuple
 
 Calibra todos os parâmetros e valores de benchmark (sufixo `O`) do PEP-1-1 a
-partir da SAM (`read_sam`) e dos parâmetros exógenos (`read_val_par`).
+partir da SAM (`read_sam`), dos parâmetros exógenos (`read_val_par`) e dos
+conjuntos de índices (`read_sets`). Os conjuntos usados voltam no campo `sets`.
 """
-function calibrate(sam::Dict{NTuple{4,Symbol},Float64}, par)
+function calibrate(sam::Dict{NTuple{4,Symbol},Float64}, par, sets::Sets)
+    (; J, I, L, K, H, F, AG, AGNG, AGD) = sets
     S(a, b, c, d) = get(sam, (a, b, c, d), 0.0)
 
     # 3.1 Dados da SAM (valores nominais; volumes recalculados na seção 4.4)
@@ -365,6 +367,7 @@ function calibrate(sam::Dict{NTuple{4,Symbol},Float64}, par)
     GFCF_REALO = GFCFO / PIXINVO
 
     return (;
+        sets,
         # parâmetros
         aij, B_KD, B_LD, B_M, B_VA, B_X, B_XT,
         beta_KD, beta_LD, beta_M, beta_VA, beta_X, beta_XT,

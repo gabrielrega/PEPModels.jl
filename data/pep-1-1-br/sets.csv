@@ -1,0 +1,10 @@
+# Conjuntos da SAM brasileira 2015 (ver references/sam-br/README.md).
+# Um só tipo de trabalho, um de capital e uma família representativa.
+J,AGR,IND,SER,ADM
+I,AGR,IND,SER,ADM
+L,LAB
+K,CAP
+H,H
+F,FIRM
+# Produto cujo mercado fecha pela lei de Walras (fora da EQ84).
+WALRAS,AGR

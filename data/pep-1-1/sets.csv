@@ -1,0 +1,10 @@
+# Conjuntos da SAM fictícia V2.0 do PEP-1-1 (seção 1 do GAMS original).
+# Uma linha por conjunto; o restante dos campos são os elementos.
+J,AGR,IND,SER,ADM
+I,AGR,FOOD,OTHIND,SER,ADM
+L,USK,SK
+K,CAP,LAND
+H,HRP,HUP,HRR,HUR
+F,FIRM
+# Produto cujo mercado fecha pela lei de Walras (fora da EQ84).
+WALRAS,AGR

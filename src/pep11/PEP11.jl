@@ -13,29 +13,34 @@ module PEP11
 using JuMP
 import Ipopt
 
-# Seção 1 do GAMS — conjuntos
-const J  = [:agr, :ind, :ser, :adm]                       # indústrias
-const I  = [:agr, :food, :othind, :ser, :adm]             # produtos
-const I1 = [:food, :othind, :ser, :adm]                   # produtos exceto agr
-const L  = [:usk, :sk]                                    # tipos de trabalho
-const K  = [:cap, :land]                                  # tipos de capital
-const AG   = [:hrp, :hup, :hrr, :hur, :firm, :gvt, :row]  # agentes
-const AGNG = [:hrp, :hup, :hrr, :hur, :firm, :row]        # agentes não governamentais
-const AGD  = [:hrp, :hup, :hrr, :hur, :firm, :gvt]        # agentes domésticos
-const H  = [:hrp, :hup, :hrr, :hur]                       # famílias
-const F  = [:firm]                                        # empresas
-
+# sets.jl antes de data.jl: `read_val_par` tem `::Sets` na assinatura.
+include("sets.jl")
 include("data.jl")
 include("calibration.jl")
 include("model.jl")
 
-const DATA_DIR = normpath(joinpath(@__DIR__, "..", "..", "data", "pep-1-1"))
+const DATA_ROOT = normpath(joinpath(@__DIR__, "..", "..", "data"))
+
+"Diretório dos dados empacotados de `name` (`pep-1-1`, `pep-1-1-br`, ...)."
+datadir(name::AbstractString) = joinpath(DATA_ROOT, name)
+
+"""
+    calibration(dir) -> NamedTuple
+
+Calibra o modelo a partir de um diretório com `sam.csv`, `val_par.csv` e
+`sets.csv`.
+"""
+function calibration(dir::AbstractString)
+    sets = read_sets(joinpath(dir, "sets.csv"))
+    sam  = read_sam(joinpath(dir, "sam.csv"))
+    par  = read_val_par(joinpath(dir, "val_par.csv"), sets)
+    return calibrate(sam, par, sets)
+end
 
 "Calibra o modelo com os dados-padrão empacotados (SAM fictícia V2.0)."
-function default_calibration()
-    sam = read_sam(joinpath(DATA_DIR, "sam.csv"))
-    par = read_val_par(joinpath(DATA_DIR, "val_par.csv"))
-    calibrate(sam, par)
-end
+default_calibration() = calibration(datadir("pep-1-1"))
+
+"Calibra o modelo com a SAM brasileira de 2015 (IBGE)."
+br_calibration() = calibration(datadir("pep-1-1-br"))
 
 end # module PEP11

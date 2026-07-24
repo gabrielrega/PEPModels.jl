@@ -5,12 +5,26 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/);
 versionamento conforme [SemVer](https://semver.org/lang/pt-BR/).
 
 ## [Não lançado]
+### Modificado
+- **Conjuntos de índices vêm dos dados, não mais do código.** `J`, `I`, `L`,
+  `K`, `H` e `F` saíam de constantes do módulo fixas nas dimensões da SAM
+  fictícia; agora cada base declara os seus num `sets.csv`, e `AG`, `AGNG`,
+  `AGD` e `I1` são derivados. `calibrate` e `read_val_par` passaram a receber
+  os conjuntos; o produto que fecha pela lei de Walras deixou de ser `agr`
+  fixo. A regressão contra o GAMS continua idêntica (932 verificações).
+- Tolerância do Ipopt escalonada pela ordem de grandeza da SAM
+  (`PEP11.default_tol`), com piso na escala da SAM fictícia; sem isso a SAM
+  brasileira, em R$ milhões, não converge dentro do `tol` antigo de 1e-10.
+
 ### Adicionado
+- `PEP11.calibration(dir)`, `PEP11.br_calibration()` e `PEP11.datadir` para
+  calibrar a partir de qualquer diretório de base.
+- Testes da base brasileira: conjuntos generalizados, PIB pelas três óticas,
+  benchmark como equilíbrio e um choque tarifário.
 - Parâmetros exógenos brasileiros (`data/pep-1-1-br/val_par.csv`): Armington do
   IPEA (TD 124) para a indústria, σVA do GTAP ponderado pelo VAB do IBGE, LES
   com `frisch = -2,0` e elasticidades-renda por Engel; proveniência documentada
-  em `references/sam-br/README.md`. Ainda não consumível: `read_val_par` e os
-  conjuntos do módulo estão fixos nas dimensões da SAM fictícia.
+  em `references/sam-br/README.md`.
 - SAM brasileira 2015 balanceada (`data/pep-1-1-br/sam.csv`) com 4 setores
   (AGR/IND/SER/ADM), 1 trabalho, 1 capital, 1 família, FIRM/GVT/ROW e contas
   de impostos, construída por `references/sam-br/build_sam.py` a partir de

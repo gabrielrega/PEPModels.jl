@@ -9,6 +9,18 @@
 d2(A, B) = [(a, b) for a in A for b in B]
 
 """
+    default_tol(cal)
+
+Tolerância do Ipopt para a SAM de `cal`. A folga de factibilidade do solver é
+**absoluta**, nas unidades da própria SAM, então precisa acompanhar a ordem de
+grandeza dos fluxos: a SAM brasileira (R\$ milhões, PIB ~6e6) não alcança a
+mesma folga que a SAM fictícia (PIB ~5e4) sem esbarrar na precisão de máquina.
+O piso mantém 1e-10 na escala da SAM fictícia, preservando a regressão contra
+o GAMS.
+"""
+default_tol(cal) = 1e-10 * max(1.0, cal.GDP_MPO / 1e5)
+
+"""
     build(cal; kmob=true, optimizer=Ipopt.Optimizer) -> JuMP.Model
 
 Constrói o modelo PEP-1-1 calibrado, com fechamento padrão já aplicado
@@ -18,10 +30,12 @@ interceptos fixos; `KS` fixo se capital móvel, `KD` fixo caso contrário).
 Para simular um choque, altere variáveis fixas com `fix(...)` e chame
 `solve!`. Ex.: `fix(m[:ttix][:agr], cal.ttixO[:agr] * 0.75; force = true)`.
 """
-function build(cal; kmob::Bool = true, optimizer = Ipopt.Optimizer)
+function build(cal; kmob::Bool = true, optimizer = Ipopt.Optimizer,
+               tol = default_tol(cal))
+    (; J, I, I1, L, K, H, F, AG, AGNG, AGD) = cal.sets
     m = Model(optimizer)
     set_silent(m)
-    set_optimizer_attribute(m, "tol", 1e-10)
+    set_optimizer_attribute(m, "tol", tol)
 
     # Suportes (condições $ do GAMS)
     supXS = [(j, i) for j in J for i in I if cal.XSO[(j, i)] > 0]
@@ -382,10 +396,11 @@ function build(cal; kmob::Bool = true, optimizer = Ipopt.Optimizer)
     @constraint(m, EQ97, GDP_MP_REAL == GDP_MP / PIXCON)
     @constraint(m, EQ98, GFCF_REAL == GFCF / PIXINV)
 
-    ## 5.3.9 Lei de Walras (folga do mercado de agr, excluído da EQ84)
+    ## 5.3.9 Lei de Walras (folga do mercado do produto excluído da EQ84)
+    w = cal.sets.walras
     @constraint(m, WALRAS,
-        LEON == Q[:agr] - sum(C[(:agr, h)] for h in H) - CG[:agr] - INV[:agr] -
-                VSTK[:agr] - DIT[:agr] - MRGN[:agr])
+        LEON == Q[w] - sum(C[(w, h)] for h in H) - CG[w] - INV[w] -
+                VSTK[w] - DIT[w] - MRGN[w])
 
     @objective(m, Min, 0)
 
