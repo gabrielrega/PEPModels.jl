@@ -37,16 +37,22 @@ function run_case(cal; cut = 0.5)
     P11.solve!(m)
     abs(value(m[:LEON])) / cal.GDP_MPO < 1e-9 || error("lei de Walras violada")
 
+    ex     = m.ext[:sup].iEXD
     imtot  = sum(cal.PWMO[i] * value(m[:IM][i])  for i in m.ext[:sup].iIM)
     imtot0 = sum(cal.PWMO[i] * cal.IMO[i]        for i in m.ext[:sup].iIM)
-    extot  = sum(cal.PWXO[i] * value(m[:EXD][i]) for i in m.ext[:sup].iEXD)
-    extot0 = sum(cal.PWXO[i] * cal.EXDO[i]       for i in m.ext[:sup].iEXD)
+    extot  = sum(cal.PWXO[i] * value(m[:EXD][i]) for i in ex)
+    extot0 = sum(cal.PWXO[i] * cal.EXDO[i]       for i in ex)
+    # Preço de exportação ponderado pela pauta do benchmark: como e e PWM estão
+    # fixos no fechamento, ele é a própria medida de termos de troca.
+    pxf    = sum(value(m[:PE_FOB][i]) * cal.EXDO[i] for i in ex) / sum(cal.EXDO[i] for i in ex)
+    pxf0   = sum(cal.PE_FOBO[i]       * cal.EXDO[i] for i in ex) / sum(cal.EXDO[i] for i in ex)
 
     return (
         gdp     = pct(value(m[:GDP_MP_REAL]), cal.GDP_MP_REALO),
         bemestar= pct(value(m[:CTH_REAL][:h]), cal.CTH_REALO[:h]),
         import_ = pct(imtot, imtot0),
         export_ = pct(extot, extot0),
+        troca   = pct(pxf, pxf0),
         xind    = pct(value(m[:XST][:ind]), cal.XSTO[:ind]),
         salario = pct(value(m[:W][:lab]) / value(m[:PIXCON]), 1.0),
         capital = pct(value(m[:RK][:cap]) / value(m[:PIXCON]), 1.0),
@@ -55,7 +61,7 @@ function run_case(cal; cut = 0.5)
 end
 
 const COLS = [(:gdp, "PIB real"), (:bemestar, "Bem-estar"), (:import_, "Import."),
-              (:export_, "Export."), (:xind, "XST ind"),
+              (:export_, "Export."), (:troca, "Trm.troca"), (:xind, "XST ind"),
               (:salario, "Salário r"), (:capital, "Ret.cap.r")]
 
 function table(title, cases)
@@ -111,9 +117,14 @@ table("E. sigma_VA — GTAP ponderado pelo VAB (base) vs 1,5 uniforme da PEP", [
     ("metade do GTAP", calib(sigma_VA = Dict(j => 0.5 * PAR0.sigma_VA[j] for j in SETS.J))),
 ])
 
-table("F. sigma_XD — demanda mundial por exportações (default PEP = 2, sem evidência BR)", [
-    ("sigma_XD = 1", calib(sigma_XD = Dict(i => 1.0 for i in SETS.I))),
-    ("sigma_XD = 2 (base)", calib()),
-    ("sigma_XD = 5", calib(sigma_XD = Dict(i => 5.0 for i in SETS.I))),
-    ("sigma_XD = 10", calib(sigma_XD = Dict(i => 10.0 for i in SETS.I))),
+table("F. sigma_XD — demanda mundial por exportações (o parâmetro dominante)", [
+    ("econométrico BR", calib(sigma_XD = Dict(:agr => 0.53, :ind => 0.78, :ser => 1.18))),
+    ("  idem, serviços no GTAP", calib(sigma_XD = Dict(:agr => 0.53, :ind => 0.78, :ser => 3.8))),
+    ("uniforme 1.0", calib(sigma_XD = Dict(i => 1.0 for i in SETS.I))),
+    ("uniforme 2.0 (base, PEP)", calib()),
+    ("uniforme 4.0", calib(sigma_XD = Dict(i => 4.0 for i in SETS.I))),
+    ("regra dos dois (2 x sigma_M)",
+     calib(sigma_XD = Dict(i => 2 * PAR0.sigma_M[i] for i in SETS.I))),
+    ("GTAP sourcing (agr 5 ind 6 ser 3.8)",
+     calib(sigma_XD = Dict(:agr => 5.0, :ind => 6.0, :ser => 3.8))),
 ])

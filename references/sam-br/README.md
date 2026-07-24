@@ -95,10 +95,68 @@ administração pública 1,26.
   satisfazer a condição de agregação, então só as **razões** entre eles
   importam. ADM é irrelevante (consumo das famílias é zero na SAM).
 
+### `sigma_XD(i)` — demanda mundial pelas exportações
+
+Está em **2 (default da PEP)**, mas é o parâmetro que mais move os resultados,
+e a evidência é contraditória. Vale entender a escolha antes de usar o modelo
+para qualquer coisa que dependa de resposta comercial.
+
+**Duas bases de evidência que discordam por uma ordem de grandeza:**
+
+*(a) Econometria brasileira.* Casagrande, Feistel, Hidalgo & Azevedo (ANPEC
+2014) estimam a função de demanda por exportações de Goldstein-Khan
+(substitutos imperfeitos) — que é **exatamente a forma funcional da EQ62** —
+por cointegração de Johansen, 1999–2013, por classe de produto e destino.
+Elasticidades-preço de longo prazo:
+
+| classe | Ásia | Nafta | UE | média | Meyer (2008) |
+|---|---|---|---|---|---|
+| Básicos | −0,85 | −0,26 | −0,49 | **−0,53** | −0,57 |
+| Manufaturados | −1,57 | −1,71 | −0,26 | **−1,18** | −0,91 |
+
+Ponderando pela pauta de 2015 (TRU nível 68) e agregando nos setores da SAM —
+a agropecuária é 100% básicos e **61% das exportações industriais são
+commodities** (minério de ferro, petróleo, açúcar, carnes, celulose,
+metalurgia básica) — chega-se a `sigma_XD` = 0,53 (AGR), 0,78 (IND). Serviços
+não têm estimativa brasileira. Há literatura dedicada ao ponto: o IPEA tem um
+texto inteiro chamado *"Por que a elasticidade-preço das exportações é baixa no
+Brasil?"*, atribuindo o resultado à pauta concentrada em commodities, onde a
+concorrência não se dá por preço.
+
+*(b) Armington / GTAP.* Em modelo de comércio Armington, a elasticidade da
+demanda pelas exportações de um país é a elasticidade de substituição **entre
+fornecedores** (σM do GTAP), que para os produtos da pauta brasileira fica
+entre 4 e 9 — média simples de 7,0 no GTAP 6. A "regra dos dois" do GTAP
+(σM = 2σD) aplicada aos nossos `sigma_M` daria `sigma_XD` de 3,0 a 4,0.
+
+**Por que discordam:** as estimativas macroeconométricas usam índices
+agregados e não instrumentam preço contra quantidade, o que enviesa o
+coeficiente na direção de zero — é o "elasticity puzzle" da literatura
+(Kehoe, Ruhl). Do outro lado, `sigma_XD` < 1 implica que o Brasil aumentaria
+sua receita de exportação restringindo volume, o que é uma afirmação forte.
+
+**O que muda no modelo** (corte de 50% nas tarifas de importação):
+
+| `sigma_XD` | PIB real | Bem-estar | Importações | Termos de troca |
+|---|---|---|---|---|
+| econométrico BR (0,53 / 0,78 / 1,18) | −0,159 | +0,236 | **+0,02** | −0,85 |
+| uniforme 2 (base) | −0,085 | +0,277 | +0,56 | −0,46 |
+| regra dos dois (2 × σM) | −0,057 | +0,294 | +0,77 | −0,31 |
+| GTAP sourcing (5 / 6 / 3,8) | −0,035 | +0,306 | +0,92 | −0,20 |
+
+O mecanismo: com CAB fixo, importação só cresce o quanto a exportação
+financiar. Com elasticidade baixa o país só vende mais cortando muito o preço,
+os termos de troca despencam e **a liberalização praticamente não gera
+importação** (+0,02%). A resposta das importações varia ~46× na faixa; o
+bem-estar, só 30%.
+
+**Conclusão prática:** não há valor único defensável. `sigma_XD` deve ser
+tratado como eixo de cenário, não como ponto — resultados de política
+comercial neste modelo só significam alguma coisa se vierem com a faixa.
+
 ### Demais parâmetros — default da PEP, sem evidência brasileira
 
-- `sigma_XD(i) = 2` (elasticidade-preço da demanda mundial pelas exportações),
-  `sigma_XT(j) = 2` (CET entre produtos de uma indústria) e
+- `sigma_XT(j) = 2` (CET entre produtos de uma indústria) e
   `sigma_X(j,i) = 2` (CET exportação × venda local).
 - `sigma_KD(j) = sigma_LD(j) = 0,8`: **degenerados** nesta SAM, que tem um só
   tipo de trabalho (LAB) e um só de capital (CAP). O valor não afeta resultado.
@@ -113,7 +171,7 @@ casos, então a sensibilidade só aparece na resposta ao choque). Resumo:
 
 | parâmetro | faixa testada | efeito nos agregados |
 |---|---|---|
-| `sigma_XD` | 1 a 10 | **dominante** — resposta do PIB varia 8× (−0,14% a −0,02%) |
+| `sigma_XD` | 0,5 a 10 | **dominante** — importações variam ~46×; ver seção própria acima |
 | `sigma_M[ind]` | 0,9 a 3,0 | moderado — PIB −0,057% a −0,129%; sinais nunca invertem |
 | `sigma_VA` | metade a 1,5 uniforme | irrelevante nos agregados, **relevante nos preços de fator** |
 | `frisch` | −1,5 a −3,0 | desprezível para choque comercial |
