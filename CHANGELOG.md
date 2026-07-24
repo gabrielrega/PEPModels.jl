@@ -6,6 +6,11 @@ versionamento conforme [SemVer](https://semver.org/lang/pt-BR/).
 
 ## [Não lançado]
 ### Adicionado
+- Parâmetros exógenos brasileiros (`data/pep-1-1-br/val_par.csv`): Armington do
+  IPEA (TD 124) para a indústria, σVA do GTAP ponderado pelo VAB do IBGE, LES
+  com `frisch = -2,0` e elasticidades-renda por Engel; proveniência documentada
+  em `references/sam-br/README.md`. Ainda não consumível: `read_val_par` e os
+  conjuntos do módulo estão fixos nas dimensões da SAM fictícia.
 - SAM brasileira 2015 balanceada (`data/pep-1-1-br/sam.csv`) com 4 setores
   (AGR/IND/SER/ADM), 1 trabalho, 1 capital, 1 família, FIRM/GVT/ROW e contas
   de impostos, construída por `references/sam-br/build_sam.py` a partir de

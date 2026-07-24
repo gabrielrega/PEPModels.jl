@@ -1,0 +1,35 @@
+PEP 1-1 version 2.1 — Brasil 2015,,,,
+Parametros exogenos (ver references/sam-br/README.md para a proveniencia),,,,
+,,,,
+Parameters indexed in j ,,,,
+,sigma_KD,sigma_LD,sigma_VA,sigma_XT
+AGR,0.8,0.8,0.24,2
+IND,0.8,0.8,1.27,2
+SER,0.8,0.8,1.39,2
+ADM,0.8,0.8,1.26,2
+,,,,
+Parameters indexed in i,,,,
+,sigma_M,sigma_XD,,
+AGR,2,2,,
+IND,1.5,2,,
+SER,1.9,2,,
+ADM,1.9,2,,
+,,,,
+"Parameters indexed in j,i",,,,
+,AGR,IND,SER,ADM
+AGR,2,2,2,2
+IND,2,2,2,2
+SER,2,2,2,2
+ADM,2,2,2,2
+,,,,
+Parameters indexed in ag,,,,
+,H,FIRM,,
+frisch,-2,,,
+AGR,0.6,,,
+IND,1,,,
+SER,1.1,,,
+ADM,1,,,
+sh0O,0,,,
+tr0O,0,,,
+ttdh0O,0,,,
+ttdf0O,,0,,
