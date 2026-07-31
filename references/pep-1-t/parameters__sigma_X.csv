@@ -1,0 +1,23 @@
+TOC,,
+sigma_X,(parameter),Elasticity (CET - exports and local sales)
+dim1,dim2,Value
+agr,agr,2
+agr,ser,2
+agr,adm,2
+agr,food,2
+agr,othind,2
+ind,agr,2
+ind,ser,2
+ind,adm,2
+ind,food,2
+ind,othind,2
+ser,agr,2
+ser,ser,2
+ser,adm,2
+ser,food,2
+ser,othind,2
+adm,agr,2
+adm,ser,2
+adm,adm,2
+adm,food,2
+adm,othind,2

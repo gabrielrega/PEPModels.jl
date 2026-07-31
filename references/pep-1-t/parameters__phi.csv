@@ -1,0 +1,8 @@
+TOC,,
+phi,(parameter),Scale parameter (allocation of investment to industries)
+dim1,dim2,Value
+cap,agr,0.01928487927199937
+cap,ind,0.01928487927199937
+cap,ser,0.01928487927199937
+land,agr,0.009642439635999684
+land,ind,0.009642439635999684

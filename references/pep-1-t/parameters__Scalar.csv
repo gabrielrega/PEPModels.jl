@@ -1,0 +1,10 @@
+TOC,,,,,
+Parameter,Value,Explanatory text,,,
+alpha,1.7638723929877902,Tobin q,,,
+A_K_PRI,1.8805836053332268,Scale parameter (private investment funtion),,,
+A_K_PUB,1.8805836053332268,Scale parameter (public investment funtion),,,
+eta,1,Price elasticity of indexed transfers and parameters,,,
+,,,,,
+Variable,Lowerbound,Value,Upperbound,Marginal,Explanatory text
+,,,,,
+Equation,Lowerbound,Value,Upperbound,Marginal,Explanatory text

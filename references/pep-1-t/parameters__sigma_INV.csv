@@ -1,0 +1,11 @@
+TOC,,
+sigma_INV,(parameter),Elasticity (investment demand)
+dim1,dim2,Value
+cap,agr,2
+cap,ind,2
+cap,ser,2
+cap,adm,2
+land,agr,2
+land,ind,2
+land,ser,2
+land,adm,2

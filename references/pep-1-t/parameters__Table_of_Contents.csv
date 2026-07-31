@@ -1,0 +1,49 @@
+Name,Type,Dim,Count,Explanatory text
+aij,parameter,2,15,Input output coefficient
+alpha,parameter,0,1,Tobin q
+A_K_PRI,parameter,0,1,Scale parameter (private investment funtion)
+A_K_PUB,parameter,0,1,Scale parameter (public investment funtion)
+beta_KD,parameter,2,5,Share parameter (CES - composite capital)
+beta_LD,parameter,2,6,Share parameter (CES - composite labor)
+beta_M,parameter,1,5,Share parameter (CES - composite commodity)
+beta_VA,parameter,1,4,Share parameter (CES - value added)
+beta_X,parameter,2,10,Share parameter (CET - exports and local sales)
+beta_XT,parameter,2,10,Share parameter (CET - total output)
+B_KD,parameter,1,3,Scale parameter (CES - composite capital)
+B_LD,parameter,1,4,Scale parameter (CES - composite labor)
+B_M,parameter,1,5,Scale parameter (CES - composite commodity)
+B_VA,parameter,1,4,Scale parameter (CES - value added)
+B_X,parameter,2,10,Scale parameter (CET - exports and local sales)
+B_XT,parameter,1,4,Scale parameter (CET - total output)
+delta,parameter,2,4,Depreciation rate of capital k in industry j
+eta,parameter,0,1,Price elasticity of indexed transfers and parameters
+frisch,parameter,1,4,Frisch parameter (LES function)
+gamma_GVT,parameter,1,1,Share of commodity i in total current public expenditures on goods and services
+gamma_INVPRI,parameter,1,2,Share of commodity i in total private investment expenditures
+gamma_INVPUB,parameter,1,2,Share of commodity i in total public investment expenditures
+gamma_LES,parameter,2,16,Marginal share of commodity i in household h consumption budget
+io,parameter,1,4,Coefficient (Leontief - intermediate consumption)
+lambda_RK,parameter,2,11,Share of type k capital income received by agent ag
+lambda_TR,parameter,2,5,Share parameter (transfer functions)
+lambda_WL,parameter,2,8,Share of type l labor income received by type h households
+n,parameter,1,10,Population growth rate
+phi,parameter,2,5,Scale parameter (allocation of investment to industries)
+pop,parameter,1,10,Population index
+rho_KD,parameter,1,3,Elasticity parameter (CES - composite capital)
+rho_LD,parameter,1,4,Elasticity parameter (CES - composite labor)
+rho_M,parameter,1,5,Elasticity parameter (CES - composite good)
+rho_VA,parameter,1,4,Elasticity parameter (CES - value added)
+rho_X,parameter,2,20,Elasticity parameter (CET - exports and local sales)
+rho_XT,parameter,1,4,Elasticity parameter (CET - total output)
+sigma_INV,parameter,2,8,Elasticity (investment demand)
+sigma_KD,parameter,1,4,Elasticity (CES - composite capital)
+sigma_LD,parameter,1,4,Elasticity (CES - composite labor)
+sigma_M,parameter,1,5,Elasticity (CES - composite good)
+sigma_VA,parameter,1,4,Elasticity (CES - value added)
+sigma_X,parameter,2,20,Elasticity (CET - exports and local sales)
+sigma_XD,parameter,1,5,Price elasticity of the world demand for exports of product i
+sigma_XT,parameter,1,4,Elasticity (CET - total output)
+sigma_Y,parameter,2,20,Income elasticity of consumption
+tmrg,parameter,2,1,Rate of margin i applied to commodity ij
+tmrg_X,parameter,2,2,Rate of margin i applied to exported commodity x
+v,parameter,1,4,Coefficient (Leontief - value added)

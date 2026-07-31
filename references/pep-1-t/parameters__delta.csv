@@ -1,0 +1,7 @@
+TOC,,
+delta,(parameter),Depreciation rate of capital k in industry j
+dim1,dim2,Value
+cap,agr,0.03
+cap,ind,0.03
+cap,ser,0.03
+cap,adm,0.03
