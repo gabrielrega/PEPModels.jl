@@ -5,6 +5,8 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/);
 versionamento conforme [SemVer](https://semver.org/lang/pt-BR/).
 
 ## [Não lançado]
+
+## [0.2.0] - 2026-07-31
 ### Modificado
 - **Conjuntos de índices vêm dos dados, não mais do código.** `J`, `I`, `L`,
   `K`, `H` e `F` saíam de constantes do módulo fixas nas dimensões da SAM
@@ -12,6 +14,7 @@ versionamento conforme [SemVer](https://semver.org/lang/pt-BR/).
   `AGD` e `I1` são derivados. `calibrate` e `read_val_par` passaram a receber
   os conjuntos; o produto que fecha pela lei de Walras deixou de ser `agr`
   fixo. A regressão contra o GAMS continua idêntica (932 verificações).
+  Bases montadas antes desta versão precisam ganhar um `sets.csv`.
 - Tolerância do Ipopt escalonada pela ordem de grandeza da SAM
   (`PEP11.default_tol`), com piso na escala da SAM fictícia; sem isso a SAM
   brasileira, em R$ milhões, não converge dentro do `tol` antigo de 1e-10.
