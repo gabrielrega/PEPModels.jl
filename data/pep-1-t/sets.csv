@@ -1,0 +1,17 @@
+# Conjuntos da SAM fictícia V2.0 no PEP-1-t (seção 1 do GAMS original).
+# A SAM é a mesma do PEP-1-1 — o que muda é a camada dinâmica abaixo.
+# Uma linha por conjunto; o restante dos campos são os elementos.
+J,AGR,IND,SER,ADM
+I,AGR,FOOD,OTHIND,SER,ADM
+L,USK,SK
+K,CAP,LAND
+H,HRP,HUP,HRR,HUR
+F,FIRM
+# Produto cujo mercado fecha pela lei de Walras (fora da EQ84).
+WALRAS,AGR
+# Indústrias públicas (PUB no GAMS). As demais formam BUS, derivado por
+# diferença: o investimento público segue EQ102/EQ104/EQ107, e o privado
+# EQ101/EQ105/EQ106/EQ108, então a partição precisa vir dos dados.
+PUB,ADM
+# Períodos (T /1*10/ no GAMS). O horizonte é da base, não do modelo.
+T,1,2,3,4,5,6,7,8,9,10
