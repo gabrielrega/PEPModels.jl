@@ -154,3 +154,73 @@ end
     @test value(m[:IM][:ind]) > br.IMO[:ind]
     @test value(m[:TIM][:ind]) < br.TIMO[:ind]
 end
+
+# ---------------------------------------------------------------------------
+# PEP-1-t
+# ---------------------------------------------------------------------------
+
+const P1T = PEPModels.PEP1T
+const REF_1T = normpath(joinpath(@__DIR__, "..", "references", "pep-1-t"))
+
+"""
+Como `cal_lookup`, mas aceita índices inteiros: no 1-t os parâmetros `n` e
+`pop` são indexados pelo período, que a calibração guarda como `Int` e o dump
+do GAMS traz como texto.
+"""
+function cal_lookup_1t(cal, name::Symbol, idx)
+    got = cal_lookup(cal, name, idx)
+    got === nothing || return got
+    ints = [tryparse(Int, String(x)) for x in idx]
+    any(isnothing, ints) && return nothing
+    return cal_lookup(cal, name, ints)
+end
+
+cal_1t = P1T.default_calibration()
+
+@testset "calibração do PEP-1-t reproduz parameters.xlsx do GAMS" begin
+    skip_files = ("parameters__Table_of_Contents.csv", "parameters__Scalar.csv")
+    files = filter(f -> startswith(f, "parameters__") && !(f in skip_files),
+                   readdir(REF_1T))
+    @test !isempty(files)
+    for file in files
+        name = Symbol(replace(replace(file, "parameters__" => ""), ".csv" => ""))
+        for (idx, expected) in read_ref_rows(joinpath(REF_1T, file))
+            got = cal_lookup_1t(cal_1t, name, idx)
+            if got === nothing
+                # célula fora do domínio calibrado: o GAMS só exporta não nulos
+                @test expected ≈ 0.0 atol = 1e-12
+            else
+                @test got ≈ expected rtol = 1e-9 atol = 1e-12
+            end
+        end
+    end
+
+    # Escalares da camada dinâmica, que o GAMS exporta numa aba à parte.
+    @test cal_1t.alpha   ≈ 1.7638723929877902 rtol = 1e-12
+    @test cal_1t.A_K_PRI ≈ 1.8805836053332268 rtol = 1e-12
+    @test cal_1t.A_K_PUB ≈ 1.8805836053332268 rtol = 1e-12
+    @test cal_1t.eta     ≈ 1.0
+end
+
+@testset "benchmark do PEP-1-t bate com o BAU do GAMS no período 1" begin
+    # Mesma SAM do PEP-1-1, então o período inicial tem que reproduzir o
+    # benchmark já validado — é a âncora externa da calibração dinâmica.
+    @test cal_1t.GDP_MPO ≈ 53681.0 rtol = 1e-9
+    @test cal_1t.GDP_IBO ≈ cal_1t.GDP_MPO rtol = 1e-9
+    @test cal_1t.GDP_FDO ≈ cal_1t.GDP_MPO rtol = 1e-9
+    @test cal_1t.IT_PRIO ≈ 9021.0 rtol = 1e-9
+    # A administração pública não tem capital na SAM fictícia.
+    @test cal_1t.IT_PUBO ≈ 0.0 atol = 1e-12
+
+    # Coerência interna da camada dinâmica: no benchmark o investimento repõe
+    # depreciação e crescimento, e o estoque de capital fecha com a renda.
+    for k in cal_1t.sets.K, j in cal_1t.sets.J
+        @test cal_1t.INDO[(k, j)] ≈
+              cal_1t.KDO[(k, j)] * (cal_1t.n1 + cal_1t.delta[(k, j)]) rtol = 1e-12
+        @test cal_1t.RO[(k, j)] * cal_1t.KDO[(k, j)] ≈ cal_1t.RKDO[(k, j)] rtol = 1e-12
+    end
+
+    # Índice de população: parte de 1 e cresce a n.
+    @test cal_1t.pop[1] ≈ 1.0
+    @test cal_1t.pop[10] ≈ 1.03^9 rtol = 1e-12
+end
