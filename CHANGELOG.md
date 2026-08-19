@@ -5,6 +5,18 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/);
 versionamento conforme [SemVer](https://semver.org/lang/pt-BR/).
 
 ## [Não lançado]
+### Adicionado
+- Calibração do PEP-1-t (`src/pep1t/calibration.jl`), transliteração das seções
+  3 e 4 do GAMS, com `PEP1T.calibration(dir)` e `PEP1T.default_calibration()`.
+  Contra o PEP-1-1: a SAM traz a renda do capital (`RKDO`) e o volume `KDO` sai
+  da taxa de aluguel calibrada `RO`, `gamma_INV` se desdobra em `gamma_INVPRI` e
+  `gamma_INVPUB`, e entra a seção 4.5 (capital, investimento e custo de uso).
+- Testes de regressão do PEP-1-t contra o `parameters.xlsx` do GAMS (293
+  verificações, mais os escalares dinâmicos `alpha`, `A_K_PRI`, `A_K_PUB` e
+  `eta`) e checagens do benchmark do período 1: PIB pelas três óticas contra o
+  BAU, investimento repondo depreciação e crescimento, e o índice de população.
+- Conjuntos, leitura de dados e base fictícia do PEP-1-t; pacotes GAMS de
+  referência do 1-t e dos modelos multi-país em `references/`.
 
 ## [0.2.0] - 2026-07-31
 ### Modificado
