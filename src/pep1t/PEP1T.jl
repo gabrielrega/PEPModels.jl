@@ -25,10 +25,27 @@ import ..PEP11: split_csv, val_par_blocks, read_sam, _sym, _num, _at
 # sets.jl antes de data.jl: `read_val_par` tem `::Sets` na assinatura.
 include("sets.jl")
 include("data.jl")
+include("calibration.jl")
 
 const DATA_ROOT = normpath(joinpath(@__DIR__, "..", "..", "data"))
 
 "Diretório dos dados empacotados de `name` (`pep-1-t`, ...)."
 datadir(name::AbstractString) = joinpath(DATA_ROOT, name)
+
+"""
+    calibration(dir) -> NamedTuple
+
+Calibra o modelo a partir de um diretório com `sam.csv`, `val_par.csv` e
+`sets.csv`.
+"""
+function calibration(dir::AbstractString)
+    sets = read_sets(joinpath(dir, "sets.csv"))
+    sam  = read_sam(joinpath(dir, "sam.csv"))
+    par  = read_val_par(joinpath(dir, "val_par.csv"), sets)
+    return calibrate(sam, par, sets)
+end
+
+"Calibra o modelo com os dados-padrão empacotados (SAM fictícia V2.0)."
+default_calibration() = calibration(datadir("pep-1-t"))
 
 end # module PEP1T
