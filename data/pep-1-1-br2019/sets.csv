@@ -1,0 +1,10 @@
+# Conjuntos da SAM brasileira 2019 (MIP NEREUS + TRU/CEI IBGE; ver datalake.sut.sam_pep).
+# Um só tipo de trabalho, um de capital e uma família representativa.
+J,AGR,IND,SER,ADM
+I,AGR,IND,SER,ADM
+L,LAB
+K,CAP
+H,H
+F,FIRM
+# Produto cujo mercado fecha pela lei de Walras (fora da EQ84).
+WALRAS,AGR

@@ -155,6 +155,45 @@ end
     @test value(m[:TIM][:ind]) < br.TIMO[:ind]
 end
 
+# --- SAM brasileira 2019 (MIP NEREUS + TRU/CEI IBGE, via data lake) ---------
+# Gerada fora do pacote (`python -m datalake.sut sam-pep`). Mesmos conjuntos da
+# SAM 2015, sem contas de margem (MIP setor × setor) e com exportação de ADM.
+
+@testset "calibração da SAM brasileira 2019" begin
+    b = P11.br2019_calibration()
+    # PIB a preços de mercado da NEREUS 2019 nacionalizada, R$ milhões
+    @test b.GDP_MPO ≈ 7_346_289 rtol = 1e-6
+    @test b.GDP_IBO ≈ b.GDP_MPO rtol = 1e-9
+    @test b.GDP_FDO ≈ b.GDP_MPO rtol = 1e-9
+    @test b.sigma_VA[:agr] ≈ 0.24       # val_par da SAM 2015
+    @test b.IMO[:adm] == 0.0
+    @test b.EXDO[:adm] > 0.0
+end
+
+@testset "benchmark brasileiro 2019 é equilíbrio" begin
+    b = P11.br2019_calibration()
+    m = P11.build(b)
+    P11.solve!(m)
+    @test abs(value(m[:LEON])) / b.GDP_MPO < 1e-10
+    @test value(m[:GDP_MP]) ≈ b.GDP_MPO rtol = 1e-9
+    for (i, v) in b.QO
+        v > 0 && @test value(m[:Q][i]) ≈ v rtol = 1e-8
+    end
+    for (p, v) in b.LDO
+        v > 0 && @test value(m[:LD][p]) ≈ v rtol = 1e-8
+    end
+end
+
+@testset "choque comercial no modelo brasileiro 2019" begin
+    b = P11.br2019_calibration()
+    m = P11.build(b)
+    fix(m[:ttim][:ind], b.ttimO[:ind] * 0.5; force = true)
+    P11.solve!(m)
+    @test abs(value(m[:LEON])) / b.GDP_MPO < 1e-10
+    @test value(m[:IM][:ind]) > b.IMO[:ind]
+    @test value(m[:TIM][:ind]) < b.TIMO[:ind]
+end
+
 # ---------------------------------------------------------------------------
 # PEP-1-t
 # ---------------------------------------------------------------------------

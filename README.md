@@ -55,6 +55,19 @@ PEP11.solve!(m)
 value(m[:GDP_MP])               # 5.995.787 (R$ milhões, PIB do IBGE em 2015)
 ```
 
+E uma SAM do **Brasil 2019**, mesmos 4 setores, construída da MIP interestadual
+**NEREUS 2019** (nacionalizada) com a TRU e a CEI 2019 do IBGE:
+
+```julia
+cal = PEP11.br2019_calibration()  # data/pep-1-1-br2019
+```
+
+Ela não é feita aqui: sai do data lake comum (`projetos/_shared/data-lake`,
+`python -m datalake.sut sam-pep data/pep-1-1-br2019 --val-par
+data/pep-1-1-br/val_par.csv`), que documenta o método em
+`docs/sam_pep_2019.md` (RAS das importações e impostos por produto,
+fechamento institucional pela CEI). As elasticidades são as da SAM 2015.
+
 Para uma base nova, monte os três CSVs no mesmo layout de `data/pep-1-1/`. O
 `sets.csv` declara `J`, `I`, `L`, `K`, `H`, `F` e o produto `WALRAS` (aquele
 cujo mercado fica fora da EQ84). Continuam sendo convenção obrigatória da SAM

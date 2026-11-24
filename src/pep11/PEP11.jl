@@ -43,4 +43,11 @@ default_calibration() = calibration(datadir("pep-1-1"))
 "Calibra o modelo com a SAM brasileira de 2015 (IBGE)."
 br_calibration() = calibration(datadir("pep-1-1-br"))
 
+"""
+Calibra o modelo com a SAM brasileira de 2019, gerada da MIP interestadual
+NEREUS 2019 (nacionalizada) + TRU/CEI 2019 do IBGE pelo data lake comum
+(`datalake.sut.sam_pep`, em `projetos/_shared/data-lake`).
+"""
+br2019_calibration() = calibration(datadir("pep-1-1-br2019"))
+
 end # module PEP11

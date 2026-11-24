@@ -6,6 +6,11 @@ versionamento conforme [SemVer](https://semver.org/lang/pt-BR/).
 
 ## [Não lançado]
 ### Adicionado
+- SAM do Brasil 2019 (`data/pep-1-1-br2019`, `PEP11.br2019_calibration()`):
+  MIP interestadual NEREUS 2019 nacionalizada + TRU/CEI 2019 do IBGE, gerada
+  pelo data lake comum (`datalake.sut.sam_pep`). Mesmos 4 setores e
+  elasticidades da SAM 2015; PIB R$ 7,35 tri. Testes: PIB pelas três óticas,
+  benchmark é equilíbrio (`LEON`/PIB < 1e-10) e choque tarifário.
 - Calibração do PEP-1-t (`src/pep1t/calibration.jl`), transliteração das seções
   3 e 4 do GAMS, com `PEP1T.calibration(dir)` e `PEP1T.default_calibration()`.
   Contra o PEP-1-1: a SAM traz a renda do capital (`RKDO`) e o volume `KDO` sai
